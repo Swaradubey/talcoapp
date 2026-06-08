@@ -31,7 +31,7 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="font-display font-bold text-base text-[var(--text)] transition-colors group-hover:text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
-                talco
+                CSV Auto Dialer
               </span>
             </Link>
             <p className="text-[var(--sub)] text-sm leading-relaxed max-w-sm">
