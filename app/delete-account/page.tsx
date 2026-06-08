@@ -2,31 +2,33 @@
 import { useState } from "react";
 import PageShell from "@/components/PageShell";
 
-const steps = [
-  { step: "01", title: "Open Settings", desc: "Navigate to your profile menu → Settings inside the Talco app." },
-  { step: "02", title: "Account & Privacy", desc: "Select the Account & Privacy submenu in your workspace dashboard." },
-  { step: "03", title: "Select Deletion", desc: "Scroll down to the bottom options and select 'Delete My Account'." },
-  { step: "04", title: "Confirm Password", desc: "Enter credentials to authorize. Your data is deleted in 30 days." },
-];
-
-const impacts = [
-  "All workspace message threads and logs are permanently purged",
-  "Profile identity, handles, and custom permissions are erased",
-  "All attached files, media, database tables, and backups are wiped",
-  "Any running premium team subscriptions are immediately terminated",
-  "API tokens, webhooks, and active app connections are revoked",
-  "This operation is final and cannot be reversed or retrieved",
-];
-
 export default function DeleteAccountPage() {
+  const [email, setEmail] = useState("");
+  const [reason, setReason] = useState("");
   const [confirmed, setConfirmed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  const validateEmail = (value: string) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!value) return "Email is required.";
+    if (!re.test(value)) return "Please enter a valid email address.";
+    return "";
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!confirmed || !email) return;
+    const err = validateEmail(email);
+    setEmailError(err);
+    if (err || !confirmed) return;
+    // TODO: Connect to backend/email API to submit the deletion ticket.
+    // Example: await fetch("/api/delete-account", { method: "POST", body: JSON.stringify({ email, reason }) });
     setSubmitted(true);
+  };
+
+  const handleEmailChange = (value: string) => {
+    setEmail(value);
+    if (emailError) setEmailError("");
   };
 
   return (
@@ -34,9 +36,9 @@ export default function DeleteAccountPage() {
       badge="Account Management"
       badgeColor="text-red-400"
       badgeBg="bg-red-500/10"
-      title="Delete"
-      titleAccent="Account"
-      subtitle="Request permanent removal of your user records and collaborative data from the Talco servers."
+      title="Account Deletion &"
+      titleAccent="Data Removal"
+      subtitle="Request permanent removal of your user records and associated data from the Talco servers."
       glowColor="#EF4444"
     >
       {/* Warning Banner */}
@@ -50,7 +52,7 @@ export default function DeleteAccountPage() {
         <div>
           <h4 className="text-red-400 text-sm font-extrabold mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>Critical Deletion Safeguard</h4>
           <p className="text-red-400/80 text-[11px] leading-relaxed">
-            Removing your account is a complete database delete. There are no backups or restoration tools available. Please export workspace logs or attachments prior to execution.
+            Removing your account is a complete database delete. There are no backups or restoration tools available.
           </p>
         </div>
       </div>
@@ -60,8 +62,13 @@ export default function DeleteAccountPage() {
         <h2 className="text-sm font-extrabold uppercase tracking-wider text-red-400 mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
           Impacts of Database Erasure
         </h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {impacts.map((item) => (
+        <ul className="grid grid-cols-1 gap-3">
+          {[
+            "Profile identity, including your name, email, and phone number, are erased from our database.",
+            "Call history logs and user settings associated with your account are permanently wiped.",
+            "Your authentication credentials are completely revoked and destroyed.",
+            "This operation is final and cannot be reversed or retrieved.",
+          ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F87171" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5">
                 <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
@@ -77,9 +84,14 @@ export default function DeleteAccountPage() {
         <h2 className="text-sm font-extrabold text-[var(--text)] mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
           Recommended: Delete in-app for instant purge
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {steps.map((s) => (
-            <div key={s.step} className="flex gap-3 p-4 rounded-xl bg-white/[0.01] border border-white/5">
+        <div className="grid grid-cols-1 gap-3">
+          {[
+            { step: "01", title: "Open Settings", desc: "Navigate to the Settings menu inside the Talco app." },
+            { step: "2", title: "Account Section", desc: "Scroll down to the bottom of the Settings page to find the Account section." },
+            { step: "3", title: "Select Deletion", desc: "Tap on the \u201CDelete Account\u201D button." },
+            { step: "4", title: "Confirm Deletion", desc: "When prompted, type \u201CDELETE\u201D in the text box to authorize. Your account and all associated data will be deleted instantly and permanently." },
+          ].map((s) => (
+            <div key={s.step + s.title} className="flex gap-3 p-4 rounded-xl bg-white/[0.01] border border-white/5">
               <span className="text-xs font-mono font-bold text-red-400 bg-red-500/10 border border-red-500/20 rounded-lg h-7 w-7 flex items-center justify-center shrink-0" style={{ fontFamily: 'DM Mono, monospace' }}>
                 {s.step}
               </span>
@@ -93,12 +105,12 @@ export default function DeleteAccountPage() {
       </div>
 
       {/* Request Form */}
-      <div className="glass-card rounded-2xl p-6 bg-[var(--card)] border border-white/5">
+      <div className="glass-card rounded-2xl p-6 bg-[var(--card)] border border-white/5 mb-6">
         <h2 className="text-sm font-extrabold text-[var(--text)] mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>
           Alternative: Email Deletion Request Form
         </h2>
         <p className="text-[var(--muted)] text-[11px] mb-5">
-          If you lack access to the client applications, you can submit an administrative deletion ticket. Process is validated and completed within 5 business days.
+          If you lack access to the Talco application, you can submit an administrative deletion ticket. The process is validated and completed within 5\u20137 business days.
         </p>
 
         {submitted ? (
@@ -108,31 +120,44 @@ export default function DeleteAccountPage() {
                 <polyline points="20 6 9 17 4 12"/>
               </svg>
             </div>
-            <h3 className="text-base font-extrabold text-white mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>Ticket Logged</h3>
-            <p className="text-[var(--sub)] text-xs max-w-xs mx-auto">We've received your request and will reach out to verify account ownership details shortly.</p>
+            <h3 className="text-base font-extrabold text-white mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>Ticket Submitted</h3>
+            <p className="text-[var(--sub)] text-xs max-w-xs mx-auto">
+              Your administrative deletion ticket has been submitted successfully. Our team will validate and process your request within 5\u20137 business days.
+            </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-[var(--sub)] text-xs font-bold uppercase tracking-wider mb-2 font-mono" style={{ fontFamily: 'DM Mono, monospace' }}>Account Email Address</label>
+              <label className="block text-[var(--sub)] text-xs font-bold uppercase tracking-wider mb-2 font-mono" style={{ fontFamily: 'DM Mono, monospace' }}>
+                Account Email Address <span className="text-red-400">*</span>
+              </label>
               <input
                 type="email"
                 required
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-[var(--text)] text-sm placeholder:text-[var(--muted)] focus:outline-none focus:border-red-500/50 focus:bg-white/[0.08] transition-all"
+                onChange={(e) => handleEmailChange(e.target.value)}
+                placeholder="Enter your registered email address"
+                className={`w-full px-4 py-3 rounded-xl bg-white/5 border text-sm placeholder:text-[var(--muted)] focus:outline-none focus:bg-white/[0.08] transition-all ${
+                  emailError ? "border-red-500/50" : "border-white/10 focus:border-red-500/50"
+                }`}
               />
+              {emailError && (
+                <p className="text-red-400 text-[10px] mt-1.5 font-medium">{emailError}</p>
+              )}
             </div>
             <div>
-              <label className="block text-[var(--sub)] text-xs font-bold uppercase tracking-wider mb-2 font-mono" style={{ fontFamily: 'DM Mono, monospace' }}>Feedback or Reason (Optional)</label>
+              <label className="block text-[var(--sub)] text-xs font-bold uppercase tracking-wider mb-2 font-mono" style={{ fontFamily: 'DM Mono, monospace' }}>
+                Feedback or Reason <span className="text-[var(--muted)]">(Optional)</span>
+              </label>
               <textarea
                 rows={3}
+                value={reason}
+                onChange={(e) => setReason(e.target.value)}
                 placeholder="Help us improve. Why are you requesting data deletion?"
                 className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-[var(--text)] text-sm placeholder:text-[var(--muted)] focus:outline-none focus:border-red-500/50 focus:bg-white/[0.08] transition-all resize-none"
               />
             </div>
-            
+
             <label className="flex items-start gap-3.5 cursor-pointer bg-white/[0.01] border border-white/5 p-4 rounded-xl hover:bg-white/[0.02] transition-colors">
               <input
                 type="checkbox"
@@ -141,7 +166,7 @@ export default function DeleteAccountPage() {
                 className="mt-1 accent-red-500 w-4 h-4 cursor-pointer shrink-0"
               />
               <span className="text-[var(--sub)] text-[11px] leading-relaxed font-medium">
-                I explicitly verify that deleting this account is permanent. All database tables, user records, messages, and uploaded files matching this identifier will be deleted with zero recovery methods.
+                I explicitly verify that deleting this account is permanent. All database tables, user records, call histories, and profile data matching this identifier will be deleted with zero recovery methods.
               </span>
             </label>
 
@@ -154,6 +179,20 @@ export default function DeleteAccountPage() {
             </button>
           </form>
         )}
+      </div>
+
+      {/* Manual Email Request */}
+      <div className="glass-card rounded-2xl p-6 bg-[var(--card)] border border-white/5">
+        <h2 className="text-sm font-extrabold text-[var(--text)] mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>
+          Manual Email Request
+        </h2>
+        <p className="text-[var(--muted)] text-[11px] leading-relaxed">
+          For manual requests, you can also directly email your deletion request to{" "}
+          <a href="mailto:support@talco.app" className="text-red-400 hover:text-red-300 underline underline-offset-2 transition-colors">
+            support@talco.app
+          </a>{" "}
+          from your registered email address.
+        </p>
       </div>
     </PageShell>
   );

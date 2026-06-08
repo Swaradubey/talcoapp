@@ -38,11 +38,11 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2.5 group">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[var(--accent)] to-[var(--accent2)] flex items-center justify-center glow-accent transition-all duration-300 group-hover:scale-105">
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8L7 12L13 4" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3 8L7 12L13 4" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <span className="font-display font-bold text-lg tracking-tight text-[var(--text)] transition-colors group-hover:text-white" style={{fontFamily:'Syne, sans-serif'}}>
-              talco
+            <span className="font-display font-bold text-lg tracking-tight text-[var(--text)] transition-colors group-hover:text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
+              CSV  Auto Dialer
             </span>
           </Link>
 
@@ -54,11 +54,10 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative ${
-                    isActive
-                      ? "text-[var(--accent)] bg-white/5 border border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]"
-                      : "text-[var(--sub)] hover:text-[var(--text)] hover:bg-white/5 border border-transparent"
-                  }`}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative ${isActive
+                    ? "text-[var(--accent)] bg-white/5 border border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]"
+                    : "text-[var(--sub)] hover:text-[var(--text)] hover:bg-white/5 border border-transparent"
+                    }`}
                   style={{ fontFamily: 'DM Sans, sans-serif' }}
                 >
                   {link.label}
@@ -69,7 +68,7 @@ export default function Navbar() {
               );
             })}
             <div className="w-px h-5 bg-white/10 mx-2" />
-            
+
             {/* Desktop Theme Toggle */}
             <button
               onClick={toggleTheme}
@@ -97,11 +96,10 @@ export default function Navbar() {
 
             <Link
               href="/delete-account"
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                pathname === "/delete-account"
-                  ? "bg-red-500/20 text-red-300 border border-red-500/30"
-                  : "text-red-400/90 hover:text-red-300 hover:bg-red-500/10 border border-transparent hover:border-red-500/20"
-              }`}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${pathname === "/delete-account"
+                ? "bg-red-500/20 text-red-300 border border-red-500/30"
+                : "text-red-400/90 hover:text-red-300 hover:bg-red-500/10 border border-transparent hover:border-red-500/20"
+                }`}
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               Delete Account
@@ -156,11 +154,10 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                  pathname === link.href
-                    ? "bg-white/5 text-[var(--accent)] border border-white/10"
-                    : "text-[var(--sub)] hover:text-[var(--text)] hover:bg-white/5"
-                }`}
+                className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${pathname === link.href
+                  ? "bg-white/5 text-[var(--accent)] border border-white/10"
+                  : "text-[var(--sub)] hover:text-[var(--text)] hover:bg-white/5"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -169,11 +166,10 @@ export default function Navbar() {
             <Link
               href="/delete-account"
               onClick={() => setOpen(false)}
-              className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                pathname === "/delete-account"
-                  ? "bg-red-500/20 text-red-300 border border-red-500/30"
-                  : "text-red-400 hover:bg-red-500/10"
-              }`}
+              className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${pathname === "/delete-account"
+                ? "bg-red-500/20 text-red-300 border border-red-500/30"
+                : "text-red-400 hover:bg-red-500/10"
+                }`}
             >
               Delete Account
             </Link>
