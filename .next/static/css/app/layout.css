@@ -653,6 +653,9 @@ video {
 .ml-auto{
   margin-left: auto;
 }
+.mr-2{
+  margin-right: 0.5rem;
+}
 .mt-0\.5{
   margin-top: 0.125rem;
 }
@@ -682,9 +685,6 @@ video {
 }
 .mt-6{
   margin-top: 1.5rem;
-}
-.mr-2{
-  margin-right: 0.5rem;
 }
 .block{
   display: block;
@@ -2249,6 +2249,11 @@ svg {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+.active\:scale-95:active{
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .active\:scale-\[0\.98\]:active{
   --tw-scale-x: 0.98;
   --tw-scale-y: 0.98;
@@ -2257,11 +2262,6 @@ svg {
 .active\:scale-\[0\.99\]:active{
   --tw-scale-x: 0.99;
   --tw-scale-y: 0.99;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.active\:scale-95:active{
-  --tw-scale-x: .95;
-  --tw-scale-y: .95;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .disabled\:cursor-not-allowed:disabled{
