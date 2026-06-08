@@ -204,7 +204,7 @@ export default function HomePage() {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-20 glass-card max-w-3xl mx-auto rounded-3xl p-4 sm:p-6 grid grid-cols-3 gap-3 sm:gap-6 border border-white/5 animate-fade-up-delay-4 shadow-xl">
+        <div className="mt-12 sm:mt-16 lg:mt-20 glass-card max-w-3xl mx-auto rounded-3xl p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 border border-white/5 animate-fade-up-delay-4 shadow-xl">
           {[
             { value: "500K+", label: "Active Users", desc: "Collaborating daily" },
             { value: "99.99%", label: "Uptime SLA", desc: "Enterprise graded" },
@@ -241,8 +241,8 @@ export default function HomePage() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${activeTab === tab.id
-                    ? "bg-white/10 text-white border border-white/10 shadow-lg"
-                    : `text-[var(--sub)] ${tab.color} hover:bg-white/5`
+                  ? "bg-white/10 text-white border border-white/10 shadow-lg"
+                  : `text-[var(--sub)] ${tab.color} hover:bg-white/5`
                   }`}
               >
                 {tab.label}
@@ -446,8 +446,8 @@ export default function HomePage() {
                   <button
                     onClick={() => setMicActive(!micActive)}
                     className={`px-4 py-2 rounded-xl text-xs font-bold border transition-all ${micActive
-                        ? "bg-white/5 border-white/10 text-white hover:bg-white/10"
-                        : "bg-red-500/10 border-red-500/30 text-red-400 hover:bg-red-500/20"
+                      ? "bg-white/5 border-white/10 text-white hover:bg-white/10"
+                      : "bg-red-500/10 border-red-500/30 text-red-400 hover:bg-red-500/20"
                       }`}
                   >
                     {micActive ? "🎙️ Mute Microphone" : "🔇 Unmute Microphone"}
@@ -455,8 +455,8 @@ export default function HomePage() {
                   <button
                     onClick={() => setVideoActive(!videoActive)}
                     className={`px-4 py-2 rounded-xl text-xs font-bold border transition-all ${videoActive
-                        ? "bg-white/5 border-white/10 text-white hover:bg-white/10"
-                        : "bg-red-500/10 border-red-500/30 text-red-400 hover:bg-red-500/20"
+                      ? "bg-white/5 border-white/10 text-white hover:bg-white/10"
+                      : "bg-red-500/10 border-red-500/30 text-red-400 hover:bg-red-500/20"
                       }`}
                   >
                     {videoActive ? "🎥 Turn Video Off" : "📹 Turn Video On"}

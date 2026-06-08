@@ -16,7 +16,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-white/5 bg-[var(--surface)] mt-24 relative overflow-hidden">
+    <footer className="border-t border-white/5 bg-[var(--surface)] mt-0 relative overflow-hidden">
       {/* Background glow in footer */}
       <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-[var(--accent)] opacity-[0.02] rounded-full blur-[100px] pointer-events-none" />
 
