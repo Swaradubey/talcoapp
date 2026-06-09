@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 
-export const metadata: Metadata = { title: "App Information — Talco" };
+export const metadata: Metadata = { title: "App Information — CSV Auto Dialer" };
 
 const platforms = [
-  { name: "iOS Mobile", icon: "🍎", version: "3.2.1", requires: "iOS 15.0+", size: "48 MB", store: "App Store", storeUrl: "#", active: true },
-  { name: "Android App", icon: "🤖", version: "3.2.1", requires: "Android 8.0+", size: "52 MB", store: "Google Play", storeUrl: "#", active: true },
-  { name: "macOS Client", icon: "💻", version: "3.2.1", requires: "macOS 12.0+", size: "85 MB", store: "Mac App Store", storeUrl: "#", active: true },
-  { name: "Windows App", icon: "🪟", version: "3.2.1", requires: "Windows 10+", size: "78 MB", store: "Microsoft Store", storeUrl: "#", active: true },
-  { name: "Web App", icon: "🌐", version: "Always latest", requires: "Chrome, Firefox, Safari", size: "Instant", store: "Open Web App", storeUrl: "#", active: false },
+  { name: "CSV Upload", icon: "📁", version: "1.0", desc: "Upload contact lists using CSV files with names, phone numbers, and lead details.", store: "Use Feature", storeUrl: "#", active: true },
+  { name: "Auto Dialing", icon: "⚡", version: "1.0", desc: "Start calling contacts faster with a streamlined dialing workflow.", store: "Use Feature", storeUrl: "#", active: true },
+  { name: "Lead Management", icon: "👥", version: "1.0", desc: "Organize leads, track call status, and manage contact records easily.", store: "Use Feature", storeUrl: "#", active: true },
+  { name: "Call Workflow", icon: "🔁", version: "1.0", desc: "Move through contacts step by step and keep your calling process organized.", store: "Use Feature", storeUrl: "#", active: true },
+  { name: "Data Privacy", icon: "🔒", version: "1.0", desc: "Your uploaded contact data stays organized and is used only for dialing workflow management.", store: "Use Feature", storeUrl: "#", active: true },
+  { name: "Productivity", icon: "📈", version: "1.0", desc: "Save time by reducing manual dialing and improving daily calling efficiency.", store: "Use Feature", storeUrl: "#", active: true },
 ];
 
 const features = [
@@ -38,15 +39,15 @@ const typeColor: Record<string, string> = {
 export default function AppInfoPage() {
   return (
     <PageShell
-      badge="v3.2.1 — Available Now"
+      badge="CSV Auto Dialer v1.0 — Ready to Use"
       badgeColor="text-[var(--accent)]"
       title="App"
       titleAccent="Information"
-      subtitle="Detailed specs, platform updates, core features checklist, and release changelogs for the Talco ecosystem."
+      subtitle="CSV Auto Dialer is a simple calling automation tool that helps users upload CSV contact lists, manage leads, start calls quickly, and organize calling workflows from one clean dashboard."
     >
       {/* Platform Download Cards */}
       <div className="mb-14">
-        <h2 className="text-lg font-black text-[var(--text)] mb-6" style={{ fontFamily: 'Syne, sans-serif' }}>Available Platforms</h2>
+        <h2 className="text-lg font-black text-[var(--text)] mb-6" style={{ fontFamily: 'Syne, sans-serif' }}>Core App Features</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {platforms.map((p) => (
             <div key={p.name} className="glass-card rounded-2xl p-5 bg-[var(--card)] flex flex-col justify-between h-48 border border-white/5 hover:border-white/10">
@@ -66,16 +67,9 @@ export default function AppInfoPage() {
                   )}
                 </div>
                 
-                <div className="space-y-1.5 py-1 text-[11px]">
-                  <div className="flex justify-between">
-                    <span className="text-[var(--muted)] font-medium">Platform Requires</span>
-                    <span className="text-[var(--sub)] font-mono">{p.requires}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-[var(--muted)] font-medium">Download Size</span>
-                    <span className="text-[var(--sub)] font-mono">{p.size}</span>
-                  </div>
-                </div>
+                <p className="text-[var(--sub)] text-[11px] leading-relaxed py-1">
+                  {p.desc}
+                </p>
               </div>
 
               <a
@@ -131,11 +125,11 @@ export default function AppInfoPage() {
         <h2 className="text-sm uppercase tracking-wider text-[var(--muted)] font-mono mb-4">Corporate Summary</h2>
         <dl className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-8 text-xs">
           {[
-            ["Developer Entity", "Talco Inc."],
-            ["Established", "2021 · San Francisco"],
-            ["Staff Count", "150+ Remote Engineers"],
-            ["Total Funding", "Series B · $48M"],
-            ["Product Domain", "talco.app"],
+            ["Developer Entity", "CSV Auto Dialer LLC"],
+            ["Established", "2026 · San Francisco"],
+            ["Staff Count", "Global Remote Support"],
+            ["Total Funding", "Bootstrap"],
+            ["Product Domain", "csvautodialer.com"],
             ["Operational Status", "Active (99.99%)"],
           ].map(([k, v]) => (
             <div key={k} className="border-l border-white/5 pl-3">

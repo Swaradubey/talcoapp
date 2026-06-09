@@ -42,7 +42,7 @@ export default function Navbar() {
               </svg>
             </div>
             <span className="font-display font-bold text-lg tracking-tight text-[var(--text)] transition-colors group-hover:text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
-              CSV  Auto Dialer
+              CSV Auto Dialer
             </span>
           </Link>
 

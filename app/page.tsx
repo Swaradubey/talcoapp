@@ -63,7 +63,7 @@ const quickLinks = [
       </svg>
     ),
     title: "Delete Account",
-    description: "Permanently remove your Talco account and all associated data.",
+    description: "Permanently remove your CSV Auto Dialer account and all associated data.",
     color: "text-red-400",
     bg: "bg-red-500/10",
   },
@@ -81,16 +81,16 @@ export default function HomePage() {
     avatar: string;
     system?: boolean;
   }>>([
-    { sender: "Sarah Chen", role: "Product Lead", text: "Team, we need to push the v3.2.1 build to staging today. Ready?", time: "10:24 AM", avatar: "👩🏻‍💻" },
-    { sender: "Alex Rivera", role: "Tech Lead", text: "Code is fully tested. Merged the final security patches.", time: "10:25 AM", avatar: "👨🏼‍💻" },
+    { sender: "Sarah Chen", role: "Campaign Mgr", text: "Team, we need to upload the new lead contact lists and start dialing. Ready?", time: "10:24 AM", avatar: "👩🏻‍💻" },
+    { sender: "Alex Rivera", role: "Sales Rep", text: "CSV is cleaned and uploaded. Ready to start the calling queue.", time: "10:25 AM", avatar: "👨🏼‍💻" },
   ]);
   const [typing, setTyping] = useState(false);
 
   useEffect(() => {
     if (activeTab === "messaging") {
       setMessages([
-        { sender: "Sarah Chen", role: "Product Lead", text: "Team, we need to push the v3.2.1 build to staging today. Ready?", time: "10:24 AM", avatar: "👩🏻‍💻" },
-        { sender: "Alex Rivera", role: "Tech Lead", text: "Code is fully tested. Merged the final security patches.", time: "10:25 AM", avatar: "👨🏼‍💻" },
+        { sender: "Sarah Chen", role: "Campaign Mgr", text: "Team, we need to upload the new lead contact lists and start dialing. Ready?", time: "10:24 AM", avatar: "👩🏻‍💻" },
+        { sender: "Alex Rivera", role: "Sales Rep", text: "CSV is cleaned and uploaded. Ready to start the calling queue.", time: "10:25 AM", avatar: "👨🏼‍💻" },
       ]);
       setTyping(false);
 
@@ -100,7 +100,7 @@ export default function HomePage() {
           setTyping(false);
           setMessages(prev => [
             ...prev,
-            { sender: "Talco Bot", role: "Automation", text: "🚀 Build #1482 compiled successfully. All staging tests passed (148/148). Ready to deploy.", time: "10:26 AM", avatar: "🤖", system: true }
+            { sender: "Dialer Bot", role: "Automation", text: "🚀 CSV list processed. 1,482 leads loaded into the auto-dialer. Ready to start.", time: "10:26 AM", avatar: "🤖", system: true }
           ]);
         }, 2000);
         return () => clearTimeout(t2);
@@ -114,8 +114,8 @@ export default function HomePage() {
   const [progress, setProgress] = useState(0);
   const [uploading, setUploading] = useState(false);
   const [files, setFiles] = useState([
-    { name: "talco-branding-kit.pdf", size: "4.2 MB", type: "PDF", status: "completed" },
-    { name: "staging-db-config.json", size: "12 KB", type: "JSON", status: "completed" },
+    { name: "lead-contacts-q2.csv", size: "320 KB", type: "CSV", status: "completed" },
+    { name: "campaign-followups.csv", size: "12 KB", type: "CSV", status: "completed" },
   ]);
 
   const startUpload = () => {
@@ -130,7 +130,7 @@ export default function HomePage() {
             setUploading(false);
             setFiles(prev => [
               ...prev,
-              { name: "v3.2.1-release-notes.md", size: "1.4 MB", type: "MD", status: "completed" }
+              { name: "new-leads-june.csv", size: "1.4 MB", type: "CSV", status: "completed" }
             ]);
           }, 800);
           return 100;
@@ -147,9 +147,9 @@ export default function HomePage() {
   const runWorkflow = () => {
     if (runningWorkflow) return;
     setRunningWorkflow(true);
-    setWorkflowLogs(["⚡ Webhook received from GitHub", "🔍 Parsing payload...", "🤖 AI summary generated: 'Fixed notification bugs in v3.2.1'"]);
+    setWorkflowLogs(["⚡ CSV list upload detected", "🔍 Validating phone numbers...", "🤖 Smart dialer initiated: 'Active campaign queue loaded'"]);
     setTimeout(() => {
-      setWorkflowLogs(prev => [...prev, "💬 Message sent to channel #general"]);
+      setWorkflowLogs(prev => [...prev, "📞 Outbound queue started successfully"]);
       setRunningWorkflow(false);
     }, 2500);
   };
@@ -169,21 +169,20 @@ export default function HomePage() {
       <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-10 pt-24 sm:pt-32 pb-16 text-center relative z-10 overflow-hidden">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/5 bg-white/5 text-[var(--accent)] text-xs font-mono mb-8 animate-fade-up shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]">
           <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
-          Version 3.2.1 is officially live
+          Smart CSV Calling Automation is live
         </div>
 
         <h1 className="text-[clamp(1.8rem,7vw,5rem)] font-black tracking-tight text-[var(--text)] mb-6 animate-fade-up-delay-1 leading-[1.03] break-words"
           style={{ fontFamily: 'Syne, sans-serif' }}>
-          Connect.{" "}
+          Upload. Dial.{" "}
+          <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent)] via-[var(--accent2)] to-[var(--accent3)] text-glow">
-            Create.
+            Automate.
           </span>
-          <br />Collaborate.
         </h1>
 
         <p className="text-[var(--sub)] text-base sm:text-lg md:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-up-delay-2 font-medium px-2 sm:px-0">
-          Talco is the next-generation canvas built for engineering and design teams who move fast.
-          Real-time channels, file workflows, and custom nodes — unified.
+          CSV Auto Dialer helps you upload contact lists, manage call workflows, and connect with leads faster using simple, organized, and efficient calling automation.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-delay-3 px-4 sm:px-0">
@@ -192,14 +191,14 @@ export default function HomePage() {
             className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] text-black font-bold text-sm hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all glow-accent text-center"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            Explore the App
+            Start Dialing
           </Link>
           <Link
             href="/support"
             className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/10 text-[var(--text)] font-semibold text-sm hover:bg-white/5 hover:border-white/20 transition-all text-center"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            Get Help
+            View Support
           </Link>
         </div>
 
@@ -225,17 +224,17 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-6 pb-24 relative z-10 animate-fade-up-delay-4">
         <div className="text-center mb-8">
           <h2 className="text-xs uppercase tracking-widest text-[var(--accent)] font-mono mb-2">Live Demo</h2>
-          <p className="text-2xl font-bold text-[var(--text)]" style={{ fontFamily: 'Syne, sans-serif' }}>Experience the Talco Hub</p>
+          <p className="text-2xl font-bold text-[var(--text)]" style={{ fontFamily: 'Syne, sans-serif' }}>Experience the Dialer Hub</p>
         </div>
 
         <div className="glass-card rounded-3xl border border-white/10 overflow-hidden shadow-2xl bg-black/40">
           {/* Widget Navigation Tabs */}
           <div className="flex border-b border-white/5 bg-white/[0.02] p-2 gap-1 overflow-x-auto">
             {[
-              { id: "messaging", label: "💬 Chat Feed", color: "hover:text-purple-400" },
-              { id: "files", label: "📁 Share Files", color: "hover:text-blue-400" },
-              { id: "workflows", label: "⚡ Automation Node", color: "hover:text-amber-400" },
-              { id: "video", label: "🎥 HD Video", color: "hover:text-cyan-400" },
+              { id: "messaging", label: "💬 Agent Chat", color: "hover:text-purple-400" },
+              { id: "files", label: "📁 CSV Import", color: "hover:text-blue-400" },
+              { id: "workflows", label: "⚡ Calling Flow", color: "hover:text-amber-400" },
+              { id: "video", label: "🎥 Sales Rooms", color: "hover:text-cyan-400" },
             ].map(tab => (
               <button
                 key={tab.id}
@@ -298,22 +297,22 @@ export default function HomePage() {
                       <line x1="12" y1="3" x2="12" y2="15" />
                     </svg>
                   </div>
-                  <h4 className="text-xs font-bold text-white mb-1">Drag and drop file to upload</h4>
-                  <p className="text-[10px] text-[var(--muted)] mb-4">Max file size 2GB (PDF, JSON, PNG, ZIP, MP4)</p>
+                  <h4 className="text-xs font-bold text-white mb-1">Drag and drop CSV to upload</h4>
+                  <p className="text-[10px] text-[var(--muted)] mb-4">Max file size 50MB (CSV, XLS, XLSX, TXT)</p>
 
                   {uploading ? (
                     <div className="max-w-xs mx-auto space-y-2">
                       <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
                         <div className="h-full bg-blue-400 transition-all duration-300" style={{ width: `${progress}%` }} />
                       </div>
-                      <p className="text-[10px] font-mono text-blue-300">Uploading v3.2.1-release-notes.md... {progress}%</p>
+                      <p className="text-[10px] font-mono text-blue-300">Uploading new-leads-june.csv... {progress}%</p>
                     </div>
                   ) : (
                     <button
                       onClick={startUpload}
                       className="px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 text-xs font-semibold hover:bg-blue-500/30 transition-all"
                     >
-                      Trigger Demo File Upload
+                      Trigger Demo CSV Upload
                     </button>
                   )}
                 </div>
@@ -342,8 +341,8 @@ export default function HomePage() {
                   {/* Webhook Card */}
                   <div className="w-44 glass-card p-4 rounded-2xl border border-white/10 text-center relative z-10">
                     <span className="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded-full font-mono font-medium">Trigger</span>
-                    <h5 className="text-xs font-bold text-white mt-2">GitHub Webhook</h5>
-                    <p className="text-[9px] text-[var(--muted)] mt-0.5">Push Event</p>
+                    <h5 className="text-xs font-bold text-white mt-2">CSV Upload</h5>
+                    <p className="text-[9px] text-[var(--muted)] mt-0.5">New Lead File</p>
                   </div>
 
                   {/* Flow Arrow Line */}
@@ -353,9 +352,9 @@ export default function HomePage() {
 
                   {/* AI Assistant Card */}
                   <div className="w-44 glass-card p-4 rounded-2xl border border-white/10 text-center relative z-10">
-                    <span className="text-xs bg-violet-500/10 text-violet-400 border border-violet-500/20 px-2 py-0.5 rounded-full font-mono font-medium">AI Node</span>
-                    <h5 className="text-xs font-bold text-white mt-2">Summarize Thread</h5>
-                    <p className="text-[9px] text-[var(--muted)] mt-0.5">AI LLM Engine</p>
+                    <span className="text-xs bg-violet-500/10 text-violet-400 border border-violet-500/20 px-2 py-0.5 rounded-full font-mono font-medium">Auto Dialer</span>
+                    <h5 className="text-xs font-bold text-white mt-2">Calling Engine</h5>
+                    <p className="text-[9px] text-[var(--muted)] mt-0.5">Outbound Queue</p>
                   </div>
 
                   {/* Flow Arrow Line */}
@@ -365,9 +364,9 @@ export default function HomePage() {
 
                   {/* Final Destination Card */}
                   <div className="w-44 glass-card p-4 rounded-2xl border border-white/10 text-center relative z-10">
-                    <span className="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full font-mono font-medium">Action</span>
-                    <h5 className="text-xs font-bold text-white mt-2">Post to #general</h5>
-                    <p className="text-[9px] text-[var(--muted)] mt-0.5">Workspace Channels</p>
+                    <span className="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full font-mono font-medium">Sync</span>
+                    <h5 className="text-xs font-bold text-white mt-2">CRM Integration</h5>
+                    <p className="text-[9px] text-[var(--muted)] mt-0.5">Update Lead Status</p>
                   </div>
                 </div>
 
@@ -379,10 +378,10 @@ export default function HomePage() {
                     {runningWorkflow ? (
                       <>
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping" />
-                        Running Automation test...
+                        Running Dialer test...
                       </>
                     ) : (
-                      "▶ Trigger Webhook Event"
+                      "▶ Trigger Dialer Flow"
                     )}
                   </button>
 

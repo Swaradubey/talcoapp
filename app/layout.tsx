@@ -4,8 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Talco — Connect. Create. Collaborate.",
-  description: "Talco is the modern platform for seamless team communication and creative collaboration.",
+  title: "CSV Auto Dialer — Upload. Dial. Automate.",
+  description: "CSV Auto Dialer helps you upload contact lists, manage call workflows, and connect with leads faster using simple, organized, and efficient calling automation.",
 };
 
 export default function RootLayout({

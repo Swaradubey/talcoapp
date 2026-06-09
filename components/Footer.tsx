@@ -35,7 +35,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-[var(--sub)] text-sm leading-relaxed max-w-sm">
-              Connect, create, and collaborate — all in one seamless, lightning-fast platform designed for modern teams.
+              Upload contact lists, manage call workflows, and connect with leads faster using simple, organized, and efficient calling automation.
             </p>
           </div>
 
@@ -78,13 +78,13 @@ export default function Footer() {
               <h4 className="text-[var(--text)] text-xs font-semibold uppercase tracking-wider mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>Contact</h4>
               <ul className="space-y-2.5">
                 <li>
-                  <a href="mailto:hello@talco.app" className="text-[var(--sub)] text-sm hover:text-[var(--accent)] transition-colors duration-200">
-                    hello@talco.app
+                  <a href="mailto:hello@csvautodialer.app" className="text-[var(--sub)] text-sm hover:text-[var(--accent)] transition-colors duration-200">
+                    hello@csvautodialer.app
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:support@talco.app" className="text-[var(--sub)] text-sm hover:text-[var(--accent)] transition-colors duration-200">
-                    support@talco.app
+                  <a href="mailto:support@csvautodialer.app" className="text-[var(--sub)] text-sm hover:text-[var(--accent)] transition-colors duration-200">
+                    support@csvautodialer.app
                   </a>
                 </li>
               </ul>
@@ -128,7 +128,7 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[var(--muted)] text-xs">
-            © {new Date().getFullYear()} Talco Inc. All rights reserved. Made for  hexerve modern collaboration.
+            © {new Date().getFullYear()} CSV Auto Dialer Inc by Hexerve. All rights reserved. Made for efficient outbound calling.
           </p>
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy" className="text-[var(--muted)] text-xs hover:text-[var(--sub)] transition-colors duration-200">Privacy</Link>
