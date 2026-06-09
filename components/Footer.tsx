@@ -20,7 +20,7 @@ export default function Footer() {
       {/* Background glow in footer */}
       <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-[var(--accent)] opacity-[0.02] rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-6 py-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           {/* Brand Column */}
           <div className="md:col-span-4 space-y-4">
