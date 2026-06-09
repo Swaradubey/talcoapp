@@ -862,6 +862,32 @@ svg {
   margin-right: 0;
 }
 
+/* ─── Mobile Stats Bar Fix ───────────────────────── */
+@media (max-width: 640px) {
+  .home-stats-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    max-width: 320px;
+    padding: 18px 16px;
+  }
+
+  .home-stat-item {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .home-stat-divider {
+    display: none;
+  }
+
+  .home-stat-item span:first-child {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+}
+
 /* ─── Trust Strip ────────────────────────────────── */
 .home-trust-strip {
   width: 100%;
