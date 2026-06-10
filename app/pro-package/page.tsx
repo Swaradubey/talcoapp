@@ -64,7 +64,7 @@ export default function ProPackagePage() {
                   <span className="inline-flex items-center text-[10px] font-mono font-bold tracking-wider text-[var(--sub)] bg-white/5 border border-white/10 px-3 py-1 rounded-full uppercase pricing-card-badge">
                     STARTER
                   </span>
-                  <h3 className="pricing-card-title mt-4">
+                  <h3 className="pricing-card-title mt-4 text-[var(--text)]">
                     Free Package
                   </h3>
                 </div>
@@ -131,7 +131,7 @@ export default function ProPackagePage() {
                   <span className="inline-flex items-center text-[10px] font-mono font-bold tracking-wider text-[var(--accent)] bg-[var(--accent)]/10 border border-[var(--accent)]/20 px-3 py-1 rounded-full uppercase pricing-card-badge">
                     BEST FOR GROWING TEAMS
                   </span>
-                  <h3 className="pricing-card-title mt-4">
+                  <h3 className="pricing-card-title mt-4 text-[var(--text)]">
                     Pro Package
                   </h3>
                 </div>
@@ -230,9 +230,8 @@ export default function ProPackagePage() {
               return (
                 <div
                   key={faq.id}
-                  className={`glass-card rounded-2xl overflow-hidden border transition-all duration-300 ${
-                    isOpen ? "border-[var(--accent)]/30 bg-white/[0.03]" : "border-white/5"
-                  }`}
+                  className={`glass-card rounded-2xl overflow-hidden border transition-all duration-300 ${isOpen ? "border-[var(--accent)]/30 bg-white/[0.03]" : "border-white/5"
+                    }`}
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : faq.id)}

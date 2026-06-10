@@ -78,13 +78,13 @@ export default function Footer() {
               <h4 className="text-[var(--text)] text-xs font-semibold uppercase tracking-wider mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>Contact</h4>
               <ul className="space-y-2.5">
                 <li>
-                  <a href="mailto:hello@csvautodialer.app" className="text-[var(--sub)] text-sm hover:text-[var(--accent)] transition-colors duration-200">
-                    hello@csvautodialer.app
+                  <a href="mailto:hello@telco.app" className="text-[var(--sub)] text-sm hover:text-[var(--accent)] transition-colors duration-200">
+                    hello@telco.app
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:support@csvautodialer.app" className="text-[var(--sub)] text-sm hover:text-[var(--accent)] transition-colors duration-200">
-                    support@csvautodialer.app
+                  <a href="mailto:support@telco.app" className="text-[var(--sub)] text-sm hover:text-[var(--accent)] transition-colors duration-200">
+                    support@telco.app
                   </a>
                 </li>
               </ul>

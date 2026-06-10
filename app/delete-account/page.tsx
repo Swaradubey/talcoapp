@@ -45,12 +45,12 @@ export default function DeleteAccountPage() {
       <div className="flex gap-4 p-5 rounded-2xl bg-red-500/[0.03] border border-red-500/20 mb-10 shadow-lg shadow-red-950/5 animate-fade-up">
         <div className="w-9 h-9 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400 shrink-0 border border-red-500/20">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-            <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+            <line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" />
           </svg>
         </div>
         <div>
-          <h4 className="text-red-400 text-sm font-extrabold mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>Critical Deletion Safeguard</h4>
+          <h4 className="text-red-400 text-sm font-extrabold mb-1" style={{ fontFamily: 'DM sanes, sans-serif' }}>Critical Deletion Safeguard</h4>
           <p className="text-red-400/80 text-[11px] leading-relaxed">
             Removing your account is a complete database delete. There are no backups or restoration tools available.
           </p>
@@ -59,7 +59,7 @@ export default function DeleteAccountPage() {
 
       {/* Database Impacts */}
       <div className="glass-card rounded-2xl p-6 bg-[var(--card)] border border-white/5 mb-6">
-        <h2 className="text-sm font-extrabold uppercase tracking-wider text-red-400 mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
+        <h2 className="text-sm font-extrabold uppercase tracking-wider text-red-400 mb-4" style={{ fontFamily: 'Dm sanes, sans-serif' }}>
           Impacts of Database Erasure
         </h2>
         <ul className="grid grid-cols-1 gap-3">
@@ -71,7 +71,7 @@ export default function DeleteAccountPage() {
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F87171" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5">
-                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
               </svg>
               <span className="text-[var(--sub)] text-[11px] leading-relaxed font-medium">{item}</span>
             </li>
@@ -81,7 +81,7 @@ export default function DeleteAccountPage() {
 
       {/* In-App Deletion Steps */}
       <div className="glass-card rounded-2xl p-6 bg-[var(--card)] border border-white/5 mb-6">
-        <h2 className="text-sm font-extrabold text-[var(--text)] mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
+        <h2 className="text-sm font-extrabold text-[var(--text)] mb-4" style={{ fontFamily: 'DM sanes, sans-serif' }}>
           Recommended: Delete in-app for instant purge
         </h2>
         <div className="grid grid-cols-1 gap-3">
@@ -96,8 +96,8 @@ export default function DeleteAccountPage() {
                 {s.step}
               </span>
               <div>
-                <p className="text-[var(--text)] text-xs font-extrabold mb-0.5" style={{ fontFamily: 'Syne, sans-serif' }}>{s.title}</p>
-                <p className="text-[var(--muted)] text-[10px] leading-normal">{s.desc}</p>
+                <p className="text-[var(--text)] text-xs font-extrabold mb-0.5" style={{ fontFamily: 'DM sanes, sans-serif' }}>{s.title}</p>
+                <p className="text-[var(--sub)]  text-[12px] leading-relaxed">{s.desc}</p>
               </div>
             </div>
           ))}
@@ -106,10 +106,10 @@ export default function DeleteAccountPage() {
 
       {/* Request Form */}
       <div className="glass-card rounded-2xl p-6 bg-[var(--card)] border border-white/5 mb-6">
-        <h2 className="text-sm font-extrabold text-[var(--text)] mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>
+        <h2 className="text-sm font-extrabold text-[var(--text)] mb-1" style={{ fontFamily: 'DM sanes, sans-serif' }}>
           Alternative: Email Deletion Request Form
         </h2>
-        <p className="text-[var(--muted)] text-[11px] mb-5">
+        <p className="text-[var(--sub)] text-[11px] mb-5">
           If you lack access to the Talco application, you can submit an administrative deletion ticket. The process is validated and completed within 5\u20137 business days.
         </p>
 
@@ -117,7 +117,7 @@ export default function DeleteAccountPage() {
           <div className="text-center py-8 animate-fade-in-up">
             <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-4 text-emerald-400 shadow-md">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="20 6 9 17 4 12"/>
+                <polyline points="20 6 9 17 4 12" />
               </svg>
             </div>
             <h3 className="text-base font-extrabold text-white mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>Ticket Submitted</h3>
@@ -137,9 +137,8 @@ export default function DeleteAccountPage() {
                 value={email}
                 onChange={(e) => handleEmailChange(e.target.value)}
                 placeholder="Enter your registered email address"
-                className={`w-full px-4 py-3 rounded-xl bg-white/5 border text-sm placeholder:text-[var(--muted)] focus:outline-none focus:bg-white/[0.08] transition-all ${
-                  emailError ? "border-red-500/50" : "border-white/10 focus:border-red-500/50"
-                }`}
+                className={`w-full px-4 py-3 rounded-xl bg-white/5 border text-sm placeholder:text-[var(--muted)] focus:outline-none focus:bg-white/[0.08] transition-all ${emailError ? "border-red-500/50" : "border-white/10 focus:border-red-500/50"
+                  }`}
               />
               {emailError && (
                 <p className="text-red-400 text-[10px] mt-1.5 font-medium">{emailError}</p>

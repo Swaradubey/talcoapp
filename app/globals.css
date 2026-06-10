@@ -1229,3 +1229,22 @@ svg {
 .site-footer {
   margin-top: clamp(40px, 6vw, 80px);
 }
+
+/* Light/Dark mode pricing card text fix */
+.pricing-card .pricing-card-title,
+.pricing-card .pricing-card-price {
+  color: var(--text) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+.pricing-card .pricing-card-feature {
+  color: var(--sub) !important;
+  opacity: 1 !important;
+}
+
+.pricing-card .pricing-card-desc,
+.pricing-card .pricing-card-billing {
+  color: var(--sub) !important;
+  opacity: 1 !important;
+}
