@@ -6,8 +6,8 @@ const channels = [
   {
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-        <polyline points="22,6 12,13 2,6"/>
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+        <polyline points="22,6 12,13 2,6" />
       </svg>
     ),
     title: "Email Support",
@@ -21,7 +21,7 @@ const channels = [
   {
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
       </svg>
     ),
     title: "Live Chat Support",
@@ -35,10 +35,10 @@ const channels = [
   {
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
     title: "Partnerships",
@@ -82,7 +82,7 @@ export default function ContactPage() {
             <div className={`w-9 h-9 rounded-xl ${c.bg} ${c.color} border ${c.border} flex items-center justify-center mb-4 transition-transform group-hover:scale-110 shadow-sm`}>
               {c.icon}
             </div>
-            <p className="text-[var(--text)] text-sm font-extrabold mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>{c.title}</p>
+            <p className="text-[var(--text)] text-sm font-extrabold mb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>{c.title}</p>
             <p className="text-[var(--sub)] text-xs mb-3">{c.desc}</p>
             <p className={`${c.color} text-xs font-bold font-mono`} style={{ fontFamily: 'DM Mono, monospace' }}>{c.value}</p>
           </a>
@@ -91,7 +91,7 @@ export default function ContactPage() {
 
       {/* Form Card */}
       <div className="glass-card rounded-3xl p-8 bg-[var(--card)] border border-white/5 relative">
-        <h2 className="text-xl font-extrabold text-[var(--text)] mb-6" style={{ fontFamily: 'Syne, sans-serif' }}>
+        <h2 className="text-xl font-extrabold text-[var(--text)] mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
           Send a Workspace Message
         </h2>
 
@@ -99,7 +99,7 @@ export default function ContactPage() {
           <div className="text-center py-10 animate-fade-in-up">
             <div className="w-16 h-16 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-violet-500/10">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="20 6 9 17 4 12"/>
+                <polyline points="20 6 9 17 4 12" />
               </svg>
             </div>
             <h3 className="text-xl font-extrabold text-white mb-2" style={{ fontFamily: 'Syne, sans-serif' }}>Message Dispatch Successful!</h3>
@@ -124,7 +124,7 @@ export default function ContactPage() {
                   required
                   placeholder="Jane Smith"
                   value={form.name}
-                  onChange={e => setForm({...form, name: e.target.value})}
+                  onChange={e => setForm({ ...form, name: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-[var(--text)] text-sm placeholder:text-[var(--muted)] focus:outline-none focus:border-violet-500/60 focus:bg-white/[0.08] transition-all"
                 />
               </div>
@@ -135,18 +135,18 @@ export default function ContactPage() {
                   required
                   placeholder="jane@company.com"
                   value={form.email}
-                  onChange={e => setForm({...form, email: e.target.value})}
+                  onChange={e => setForm({ ...form, email: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-[var(--text)] text-sm placeholder:text-[var(--muted)] focus:outline-none focus:border-violet-500/60 focus:bg-white/[0.08] transition-all"
                 />
               </div>
             </div>
-            
+
             <div>
               <label className="block text-[var(--sub)] text-xs font-bold uppercase tracking-wider mb-2 font-mono" style={{ fontFamily: 'DM Mono, monospace' }}>Message Subject</label>
               <div className="relative">
                 <select
                   value={form.subject}
-                  onChange={e => setForm({...form, subject: e.target.value})}
+                  onChange={e => setForm({ ...form, subject: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-[var(--text)] text-sm focus:outline-none focus:border-violet-500/60 focus:bg-white/[0.08] transition-all appearance-none cursor-pointer"
                 >
                   {subjects.map(s => (
@@ -170,7 +170,7 @@ export default function ContactPage() {
                 rows={5}
                 placeholder="Tell us what's on your mind..."
                 value={form.message}
-                onChange={e => setForm({...form, message: e.target.value})}
+                onChange={e => setForm({ ...form, message: e.target.value })}
                 className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-[var(--text)] text-sm placeholder:text-[var(--muted)] focus:outline-none focus:border-violet-500/60 focus:bg-white/[0.08] transition-all resize-none"
               />
             </div>

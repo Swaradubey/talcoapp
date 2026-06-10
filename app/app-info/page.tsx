@@ -94,7 +94,7 @@ export default function AppInfoPage() {
             <div key={f.title} className="flex gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all">
               <span className="text-2xl shrink-0 p-2.5 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center h-11 w-11 shadow-sm">{f.icon}</span>
               <div>
-                <p className="text-[var(--text)] text-sm font-extrabold mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>{f.title}</p>
+                <p className="text-[var(--text)] text-sm font-extrabold mb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>{f.title}</p>
                 <p className="text-[var(--sub)] text-xs leading-relaxed">{f.desc}</p>
               </div>
             </div>

@@ -110,7 +110,7 @@ const sections = [
         <p className="text-[var(--sub)] text-sm leading-relaxed mb-3">
           You have the right to delete your account and associated data at any time.
         </p>
-        <p className="text-[var(--text)] text-xs font-extrabold mb-2" style={{ fontFamily: "Syne, sans-serif" }}>
+        <p className="text-[var(--text)] text-xs font-extrabold mb-2" style={{ fontFamily: "DM Sans, sans-serif" }}>
           In-App Account Deletion:
         </p>
         <p className="text-[var(--sub)] text-sm leading-relaxed mb-3">
@@ -122,7 +122,7 @@ const sections = [
         <p className="text-[var(--sub)] text-sm leading-relaxed mb-3">
           After confirmation, your account credentials, profile data, call history, user settings, and associated database records will be permanently deleted.
         </p>
-        <p className="text-[var(--text)] text-xs font-extrabold mb-2" style={{ fontFamily: "Syne, sans-serif" }}>
+        <p className="text-[var(--text)] text-xs font-extrabold mb-2" style={{ fontFamily: "DM Sans, sans-serif" }}>
           Email Deletion Request:
         </p>
         <p className="text-[var(--sub)] text-sm leading-relaxed">
@@ -190,8 +190,8 @@ const sections = [
           className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500/10 text-amber-400 text-sm font-medium border border-amber-500/20 hover:bg-amber-500/20 transition-all"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
           </svg>
           support@talco.app
         </a>
@@ -213,9 +213,9 @@ export default function PrivacyPolicyPage() {
       {/* Last updated banner */}
       <div className="flex items-center gap-3 p-4 rounded-xl bg-amber-500/5 border border-amber-500/20 mb-10">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
         </svg>
-        <p className="text-amber-400/80 text-sm" style={{fontFamily:'DM Mono, monospace'}}>
+        <p className="text-amber-400/80 text-sm" style={{ fontFamily: 'DM Mono, monospace' }}>
           Last updated: June 2026
         </p>
       </div>
@@ -227,12 +227,12 @@ export default function PrivacyPolicyPage() {
             <div className="flex items-start gap-4">
               <span
                 className="text-xs font-mono text-[var(--muted)] bg-[var(--border)] rounded-md px-2 py-1 mt-0.5 shrink-0"
-                style={{fontFamily:'DM Mono, monospace'}}
+                style={{ fontFamily: 'DM Mono, monospace' }}
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div className="min-w-0 flex-1">
-                <h2 className="text-[var(--text)] font-semibold mb-3" style={{fontFamily:'Syne, sans-serif'}}>
+                <h2 className="text-[var(--text)] font-semibold mb-3" style={{ fontFamily: 'Syne, sans-serif' }}>
                   {section.title}
                 </h2>
                 {section.content}
