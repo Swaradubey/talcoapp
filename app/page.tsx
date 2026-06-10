@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import ProPackageSection from "@/components/ProPackageSection";
 
 const quickLinks = [
   {
@@ -246,16 +247,12 @@ export default function HomePage() {
               </div>
 
               {/* Main Headline */}
-              <h1
-                className="hero-title animate-fade-up-delay-1"
-                style={{ fontFamily: 'Syne, sans-serif' }}
-              >
-                Upload. Dial.{" "}
+              <h1 className="hero-title animate-fade-up-delay-1">
+                UPLOAD. DIAL.{" "}
                 <span
                   className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent)] via-[var(--accent2)] to-[var(--accent3)] text-glow"
-                  style={{ display: 'inline-block' }}
                 >
-                  Automate.
+                  AUTOMATE.
                 </span>
               </h1>
 
@@ -353,7 +350,7 @@ export default function HomePage() {
                     {card.icon}
                   </div>
                   <span className={`home-feature-badge ${card.color}`}>{card.badge}</span>
-                  <h3 className="home-feature-title" style={{ fontFamily: 'Syne, sans-serif' }}>
+                  <h3 className="home-feature-title">
                     {card.title}
                   </h3>
                   <p className="home-feature-desc">{card.description}</p>
@@ -615,6 +612,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <ProPackageSection />
 
         {/* ══════════════════════════════
             QUICK LINKS GRID
