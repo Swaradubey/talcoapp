@@ -47,7 +47,7 @@ export default function AppInfoPage() {
     >
       {/* Platform Download Cards */}
       <div className="mb-14">
-        <h2 className="text-lg font-black text-[var(--text)] mb-6" style={{ fontFamily: 'Syne, sans-serif' }}>Core App Features</h2>
+        <h2 className="section-heading">Core App Features</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {platforms.map((p) => (
             <div key={p.name} className="glass-card rounded-2xl p-5 bg-[var(--card)] flex flex-col justify-between h-48 border border-white/5 hover:border-white/10">
@@ -56,7 +56,7 @@ export default function AppInfoPage() {
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">{p.icon}</span>
                     <div>
-                      <p className="text-[var(--text)] text-sm font-extrabold" style={{ fontFamily: 'Syne, sans-serif' }}>{p.name}</p>
+                      <p className="card-small-title">{p.name}</p>
                       <p className="text-[var(--sub)] text-[10px] font-mono" style={{ fontFamily: 'DM Mono, monospace' }}>v{p.version}</p>
                     </div>
                   </div>
@@ -66,7 +66,7 @@ export default function AppInfoPage() {
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-400" title="Cloud Hosted" />
                   )}
                 </div>
-                
+
                 <p className="text-[var(--sub)] text-[11px] leading-relaxed py-1">
                   {p.desc}
                 </p>
@@ -74,11 +74,10 @@ export default function AppInfoPage() {
 
               <a
                 href={p.storeUrl}
-                className={`w-full block text-center py-2 rounded-xl text-xs font-bold transition-all border ${
-                  p.active 
-                    ? "bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-white/20"
-                    : "bg-[var(--accent)] text-black border-transparent hover:opacity-90"
-                }`}
+                className={`w-full block text-center py-2 rounded-xl text-xs font-bold transition-all border ${p.active
+                  ? "bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-white/20"
+                  : "bg-[var(--accent)] text-black border-transparent hover:opacity-90"
+                  }`}
               >
                 {p.store} →
               </a>
@@ -89,7 +88,7 @@ export default function AppInfoPage() {
 
       {/* Core Features Grid */}
       <div className="mb-14">
-        <h2 className="text-lg font-black text-[var(--text)] mb-6" style={{ fontFamily: 'Syne, sans-serif' }}>Core Capabilities</h2>
+        <h2 className="text-lg font-black text-[var(--text)] mb-6" style={{ fontFamily: 'Syne, sans-serif' }}></h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {features.map((f) => (
             <div key={f.title} className="flex gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all">
@@ -105,7 +104,7 @@ export default function AppInfoPage() {
 
       {/* Structured Release Notes */}
       <div className="mb-14">
-        <h2 className="text-lg font-black text-[var(--text)] mb-6" style={{ fontFamily: 'Syne, sans-serif' }}>Release Notes & Changelog</h2>
+        <h2 className="section-heading">Release Notes & Changelog</h2>
         <div className="space-y-4">
           {changelog.map((r) => (
             <div key={r.version} className="glass-card rounded-2xl p-5 bg-[var(--card)] border border-white/5 hover:border-white/10">

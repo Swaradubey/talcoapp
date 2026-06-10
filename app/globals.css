@@ -4,6 +4,48 @@
 @tailwind components;
 @tailwind utilities;
 
+.section-heading {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+.card-small-title {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.demo-section-heading {
+  font-family: "DM Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+
+.demo-section-heading {
+  font-family: "DM Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+
 :root {
   --bg: #030308;
   --surface: #07070f;

@@ -334,7 +334,7 @@ export default function HomePage() {
           <div className="page-container">
             <div className="home-section-header animate-fade-up">
               <p className="home-section-eyebrow">How It Works</p>
-              <h2 id="features-heading" className="home-section-title" style={{ fontFamily: 'Syne, sans-serif' }}>
+              <h2 id="features-heading" className="demo-section-heading">
                 Three steps to full automation
               </h2>
               <p className="home-section-sub">
@@ -370,7 +370,7 @@ export default function HomePage() {
           <div className="page-container">
             <div className="home-section-header animate-fade-up">
               <p className="home-section-eyebrow">Live Demo</p>
-              <h2 id="demo-heading" className="home-section-title" style={{ fontFamily: 'Syne, sans-serif' }}>
+              <h2 id="demo-heading" className="section-heading text-center">
                 Experience the Dialer Hub
               </h2>
             </div>
@@ -622,7 +622,7 @@ export default function HomePage() {
         <section className="home-links-section" aria-labelledby="hub-heading">
           <div className="page-container">
             <div className="home-section-header animate-fade-up">
-              <h2 id="hub-heading" className="home-section-title" style={{ fontFamily: 'Syne, sans-serif' }}>
+              <h2 id="hub-heading" className="demo-section-heading">
                 Explore the Hub
               </h2>
             </div>
@@ -636,7 +636,7 @@ export default function HomePage() {
                   <div className={`w-11 h-11 rounded-xl ${item.bg} ${item.color} flex items-center justify-center mb-5 transition-transform group-hover:scale-110 shadow-md`}>
                     {item.icon}
                   </div>
-                  <h3 className="text-[var(--text)] font-extrabold mb-2 text-sm sm:text-[12px] group-hover:text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
+                  <h3 className="hub-card-title group-hover:text-white">
                     {item.title}
                   </h3>
                   <p className="text-[var(--sub)] text-[11px] sm:text-xs leading-relaxed">{item.description}</p>

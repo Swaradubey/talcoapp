@@ -44,8 +44,8 @@ export default function PageShell({
           </div>
         )}
         <h1
-          className="text-4xl md:text-6xl font-extrabold text-[var(--text)] tracking-tight mb-5 animate-fade-up-delay-1"
-          style={{ fontFamily: "Syne, sans-serif", lineHeight: 1.1 }}
+          className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-[var(--text)] tracking-[-0.04em] mb-5 animate-fade-up-delay-1"
+          style={{ fontFamily: "Inter, sans-serif", lineHeight: 1 }}
         >
           {title}{" "}
           {titleAccent && (
