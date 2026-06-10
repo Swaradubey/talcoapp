@@ -616,15 +616,16 @@ export default function HomePage() {
         <ProPackageSection />
 
         {/* ══════════════════════════════
-            QUICK LINKS GRID
-        ══════════════════════════════ */}
-        <section className="home-links-section" aria-labelledby="hub-heading">
+    QUICK LINKS GRID
+══════════════════════════════ */}
+        <section className="home-links-section home-last-section" aria-labelledby="hub-heading">
           <div className="page-container">
             <div className="home-section-header animate-fade-up">
               <h2 id="hub-heading" className="demo-section-heading">
                 Explore the Hub
               </h2>
             </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {quickLinks.map((item) => (
                 <Link
@@ -635,13 +636,28 @@ export default function HomePage() {
                   <div className={`w-11 h-11 rounded-xl ${item.bg} ${item.color} flex items-center justify-center mb-5 transition-transform group-hover:scale-110 shadow-md`}>
                     {item.icon}
                   </div>
+
                   <h3 className="hub-card-title group-hover:text-white">
                     {item.title}
                   </h3>
-                  <p className="text-[var(--sub)] text-[11px] sm:text-xs leading-relaxed">{item.description}</p>
+
+                  <p className="text-[var(--sub)] text-[11px] sm:text-xs leading-relaxed">
+                    {item.description}
+                  </p>
+
                   <div className={`mt-4 flex items-center gap-1 ${item.color} text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
                     View page
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="translate-y-0.5">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="translate-y-0.5"
+                    >
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                   </div>
@@ -650,7 +666,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
       </div>
     </div>
   );

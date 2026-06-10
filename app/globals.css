@@ -1221,3 +1221,11 @@ svg {
     font-size: clamp(2.3rem, 10vw, 3.4rem) !important;
   }
 }
+
+.home-last-section {
+  padding-bottom: clamp(70px, 8vw, 110px);
+}
+
+.site-footer {
+  margin-top: clamp(40px, 6vw, 80px);
+}
