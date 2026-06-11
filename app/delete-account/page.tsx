@@ -182,10 +182,10 @@ export default function DeleteAccountPage() {
 
       {/* Manual Email Request */}
       <div className="glass-card rounded-2xl p-6 bg-[var(--card)] border border-white/5">
-        <h2 className="text-sm font-extrabold text-[var(--text)] mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>
+        <h2 className="text-sm font-extrabold text-[sub(--text)] mb-1" style={{ fontFamily: 'DM sanes, sans-serif' }}>
           Manual Email Request
         </h2>
-        <p className="text-[var(--muted)] text-[11px] leading-relaxed">
+        <p className="text-[sub(--text)] text-[11px] leading-relaxed">
           For manual requests, you can also directly email your deletion request to{" "}
           <a href="mailto:support@talco.app" className="text-red-400 hover:text-red-300 underline underline-offset-2 transition-colors">
             support@talco.app

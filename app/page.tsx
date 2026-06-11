@@ -292,12 +292,12 @@ export default function HomePage() {
                     <div className="flex flex-col items-center text-center">
                       <span
                         className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white to-[var(--sub)]"
-                        style={{ fontFamily: 'Syne, sans-serif' }}
+                        style={{ fontFamily: 'DM sanes, sans-serif' }}
                       >
                         {s.value}
                       </span>
                       <span className="text-[11px] font-semibold text-[var(--text)] mt-1">{s.label}</span>
-                      <span className="text-[10px] text-[var(--muted)] hidden sm:block">{s.desc}</span>
+                      <span className="text-[10px] text-[var(--sub)] hidden sm:block">{s.desc}</span>
                     </div>
                   </div>
                 ))}

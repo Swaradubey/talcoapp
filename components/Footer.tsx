@@ -127,15 +127,15 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[var(--muted)] text-xs">
+          <p className="text-[var(--sub)] text-xs">
             © {new Date().getFullYear()} CSV Auto Dialer Inc by Hexerve. All rights reserved. Made for efficient outbound calling.
           </p>
           <div className="flex items-center gap-4">
-            <Link href="/privacy-policy" className="text-[var(--muted)] text-xs hover:text-[var(--sub)] transition-colors duration-200">Privacy</Link>
+            <Link href="/privacy-policy" className="text-[var(--sub)] text-xs hover:text-[var(--sub)] transition-colors duration-200">Privacy</Link>
             <span className="text-white/10">·</span>
-            <Link href="/contact" className="text-[var(--muted)] text-xs hover:text-[var(--sub)] transition-colors duration-200">Contact</Link>
+            <Link href="/contact" className="text-[var(--sub)] text-xs hover:text-[var(--sub)] transition-colors duration-200">Contact</Link>
             <span className="text-white/10">·</span>
-            <Link href="/delete-account" className="text-[var(--muted)] text-xs hover:text-red-400 transition-colors duration-200">Delete Account</Link>
+            <Link href="/delete-account" className="text-[var(--sub)] text-xs hover:text-red-400 transition-colors duration-200">Delete Account</Link>
           </div>
         </div>
       </div>

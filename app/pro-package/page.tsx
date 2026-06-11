@@ -106,8 +106,8 @@ export default function ProPackagePage() {
             <div>
               {/* CTA Button */}
               <Link
-                href="/app-info"
-                className="btn-primary w-full py-3.5 text-center justify-center shadow-lg font-bold rounded-xl block text-xs sm:text-sm hover:scale-[1.02] active:scale-[0.98] transition-all"
+                href="/free-plan"
+                className="btn-primary w-full py-3.5 text-center justify-center shadow-lg font-bold rounded-xl flex text-xs sm:text-sm hover:scale-[1.02] active:scale-[0.98] transition-all"
                 style={{ fontFamily: "DM Sans, sans-serif" }}
               >
                 Start Free Plan
@@ -216,7 +216,7 @@ export default function ProPackagePage() {
         {/* Benefits & FAQ Section */}
         <div className="w-full max-w-2xl">
           <div className="text-center mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2" style={{ fontFamily: "Syne, sans-serif" }}>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-2" style={{ fontFamily: "DM sanes, sans-serif" }}>
               Benefits & FAQs
             </h2>
             <p className="text-xs sm:text-sm text-[var(--sub)]">
@@ -237,7 +237,7 @@ export default function ProPackagePage() {
                     onClick={() => setOpenFaq(isOpen ? null : faq.id)}
                     className="w-full flex items-center justify-between p-5 text-left transition-colors hover:bg-white/[0.01]"
                   >
-                    <span className="text-[var(--text)] text-xs sm:text-sm font-bold pr-4" style={{ fontFamily: "Syne, sans-serif" }}>
+                    <span className="text-[var(--text)] text-xs sm:text-sm font-bold pr-4" style={{ fontFamily: "DM sanes, sans-serif" }}>
                       {faq.q}
                     </span>
                     <div className={`w-7 h-7 rounded-lg flex items-center justify-center bg-white/5 border border-white/5 transition-transform duration-300 shrink-0 ${isOpen ? "rotate-180 bg-[var(--accent)]/10 border-[var(--accent)]/20" : ""}`}>

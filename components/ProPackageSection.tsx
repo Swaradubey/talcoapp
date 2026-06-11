@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 export default function ProPackageSection() {
@@ -76,8 +74,8 @@ export default function ProPackageSection() {
             <div>
               {/* CTA Button */}
               <Link
-                href="/app-info"
-                className="btn-primary w-full py-3.5 text-center justify-center shadow-lg font-bold rounded-xl block text-xs sm:text-sm hover:scale-[1.02] active:scale-[0.98] transition-all"
+                href="/free-plan"
+                className="btn-primary w-full py-3.5 text-center justify-center shadow-lg font-bold rounded-xl flex text-xs sm:text-sm hover:scale-[1.02] active:scale-[0.98] transition-all"
                 style={{ fontFamily: "DM Sans, sans-serif" }}
               >
                 Start Free Plan

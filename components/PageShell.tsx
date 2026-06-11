@@ -55,7 +55,7 @@ export default function PageShell({
           )}
         </h1>
         <p
-          className="text-[var(--sub)] text-base md:text-lg max-w-xl mx-auto leading-relaxed animate-fade-up-delay-2"
+          className="mt-4 text-[var(--sub)] text-base md:text-lg max-w-xl mx-auto leading-relaxed animate-fade-up-delay-2"
           style={{ fontFamily: "DM Sans, sans-serif" }}
         >
           {subtitle}

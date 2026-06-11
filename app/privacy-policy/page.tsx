@@ -223,7 +223,7 @@ export default function PrivacyPolicyPage() {
       {/* Sections */}
       <div className="space-y-6">
         {sections.map((section, i) => (
-          <div key={section.title} className="gradient-border rounded-2xl p-6 bg-[var(--card)]">
+          <div key={section.title} className="gradient-border rounded-2xl p-4 sm:p-6 bg-[var(--card)]">
             <div className="flex items-start gap-4">
               <span
                 className="text-xs font-mono text-[var(--muted)] bg-[var(--border)] rounded-md px-2 py-1 mt-0.5 shrink-0"
@@ -232,7 +232,7 @@ export default function PrivacyPolicyPage() {
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div className="min-w-0 flex-1">
-                <h2 className="text-[var(--text)] font-semibold mb-3" style={{ fontFamily: 'Syne, sans-serif' }}>
+                <h2 className="text-[var(--text)] font-semibold mb-3" style={{ fontFamily: 'DM sanes, sans-serif' }}>
                   {section.title}
                 </h2>
                 {section.content}
