@@ -52,18 +52,13 @@ export default function Navbar() {
           <div className="px-5 sm:px-6 flex items-center justify-between" style={{ height: '68px' }}>
 
             {/* ── Logo ── */}
-            <Link href="/" className="flex items-center gap-2.5 group shrink-0" aria-label="CSV Auto Dialer home">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[var(--accent)] to-[var(--accent2)] flex items-center justify-center glow-accent transition-all duration-300 group-hover:scale-105 group-hover:rotate-3 shrink-0">
-                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8L7 12L13 4" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <span
-                className="font-bold text-[15px] tracking-tight text-[var(--text)] transition-colors group-hover:text-white hidden xs:block sm:block"
-                style={{ fontFamily: 'Syne, sans-serif', letterSpacing: '-0.01em' }}
-              >
-                CSV Auto Dialer
-              </span>
+            <Link href="/" className="flex items-center gap-2.5 group shrink-0" aria-label="Telco CSV Solutions">
+              <img
+                src="/logo.png"
+                alt="Telco CSV Solutions"
+                className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                style={{ height: '40px' }}
+              />
             </Link>
 
             {/* ── Desktop Nav Links ── */}

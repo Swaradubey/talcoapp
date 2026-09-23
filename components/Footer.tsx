@@ -24,14 +24,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           {/* Brand Column */}
           <div className="md:col-span-4 space-y-4">
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-7 h-7 rounded-md bg-gradient-to-tr from-[var(--accent)] to-[var(--accent2)] flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8L7 12L13 4" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
+            <Link href="/" className="flex items-center gap-2.5 group" aria-label="Telco CSV Solutions">
+              <img
+                src="/logo.png"
+                alt="Telco CSV Solutions"
+                className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                style={{ height: '32px' }}
+              />
               <span className="font-display font-bold text-base text-[var(--text)] transition-colors group-hover:text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
-                CSV Auto Dialer
+                Telco CSV Solutions
               </span>
             </Link>
             <p className="text-[var(--sub)] text-sm leading-relaxed max-w-sm">
